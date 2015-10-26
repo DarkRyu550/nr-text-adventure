@@ -1,4 +1,4 @@
-# NR Text Adventure (Versão 0.1)
+# NR Text Adventure
 O jogo Text Adventure que fiz para concorrer no "NR Maníaco 2015".
 
 # Detalhes para compilação
