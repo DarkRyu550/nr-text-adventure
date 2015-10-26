@@ -1,0 +1,366 @@
+{
+	"itaporã": {
+        "location": "no Itaporã 5, um quarto que parece bem pequeno, mas não é tanto assim",
+        "south-east": {
+            "name": "a enfermaria",
+            "link": "início"
+        }
+    },
+    "início": {
+        "location": "na frente da enfermaria, em uma via feita de pedras, com alguns chalés em volta",
+        "north-west": {
+            "name": "o Itaporã 5, seu quarto",
+            "link": "itaporã"
+        },
+        "north-east": {
+            "name": "um corredor para o noroeste do gramado central",
+            "link": "int:gramado/nw"
+        }
+    },
+    "gramado": {
+        "location": "no gramado central, uma área verde que fica bem no meio do NR, você vê uma paisagem de encher os olhos, para onde você olha, altos morros, cobertos de árvores",
+        "south": {
+            "name": "um lago, que se encaixa bem na paisagem, fazendo o lugar parecer ainda mais bonito",
+            "link": null
+        },
+        "north-west": {
+            "name": "um corredor para a frente da enfermaria",
+            "link": "int:gramado/nw"
+        },
+        "north-east": {
+            "name": "o refeitório",
+            "link": "refeitório"
+        },
+        "south-east": {
+            "name": "o ginásio (que é bem grande, por sinal) e a sua única travessia visível para o outro lado do lago",
+            "link": "int:gramado/se"
+        }
+    },
+    "int:gramado/nw": {
+        "location": "em um corredor coberto, ao noroeste do gramado central, com chão de pedra e colunas de madeira, você consegue ver morros e árvores ao longe, em todas as direções",
+        "north": {
+            "name": "um barranco gramado, com árvores de clima frio em cima (apesar de que não está frio, exatamente)",
+            "link": null
+        },
+        "east": {
+            "name": "o refeitório",
+            "link": "refeitório"
+        },
+        "south-east": {
+            "name": "o gramado central",
+            "link": "gramado"
+        }
+    },
+    "refeitório": {
+        "location": "na frente do refeitório (que mais lembra uma daquelas casas alemãs), mas aparentemente está fechado agora",
+        "west": {
+            "name": "um corredor, para a frente da enfermaria",
+            "link": "int:gramado/nw"
+        },
+        "east": {
+            "name": "um caminho para a frente do chalé Village (Que mais parece um castelo)",
+            "link": "int:village"
+        },
+        "south": {
+            "name": "uma escada descendo para a entrada do ginásio",
+            "link": "int:gramado/se"
+        },
+        "south-west": {
+            "name": "o gramado central",
+            "link": "gramado"
+        }
+    },
+    "int:village": {
+        "location": "na frente do chalé Village, que tem dois andares, mas você não pode entrar em nenhum deles, e, sim, parece mesmo um castelo de perto",
+        "east": {
+            "name": "a Vila Olímpica",
+            "link": "vila_olímpica"
+        },
+        "west": {
+            "name": "o caminho de volta ao refeitório",
+            "link": "refeitório"
+        },
+        "south": {
+            "name": "uma descida para a frente da piscina",
+            "link": "int:piscina"
+        }
+    },
+    "vila_olímpica": {
+        "location": "de frente com G̶a̶b̶i̶ os chalés da Vila Olímpica, que são seis, e correspondem às cores da bandeira olímpica",
+        "east": {
+            "name": "uma densa floresta, com uma estrada saindo dela",
+            "link": null
+        },
+        "west": {
+            "name": "o chalé Village",
+            "link": "int:village"
+        },
+        "south": {
+            "name": "uma decida para um campo aberto",
+            "link": "campo/n"
+        }
+    },
+    "int:gramado/se": {
+        "location": "à beira do lago, ao sudeste do gramado central",
+        "north": {
+            "name": "uma escada subindo para o refeitório",
+            "link": "refeitório"
+        },
+        "east": {
+            "name": "um caminho para o campo de futebol (Campão) e a piscina",
+            "link": "int:piscina"
+        },
+        "south": {
+            "name": "uma estrada para o outro lado do lago",
+            "link": "int:festa"
+        },
+        "north-west": {
+            "name": "o gramado central",
+            "link": "gramado"
+        },
+        "south-east": {
+            "name": "a entrada do ginásio",
+            "link": "ginásio"
+        },
+        "south-west": {
+            "name": "o lago, que está cheio de gansos e tem um aspecto marrom, mas que acaba o ajudando a se itegrar na paisagem",
+            "link": null
+        }
+    },
+    "piscina": {
+        "location": "na beira da menor das três piscinas, que é aquecida (Só uma delas não é). Também há um toboágua, que desce até a outra piscina aquecida.",
+        "south-west": {
+            "name": "a saída da piscina",
+            "link": "int:piscina"
+        }
+    },
+    "int:piscina": {
+        "location": "QUANTAS OPÇÕES! Sério, muitos caminhos divergentes, e uma pedra, com uma bica de água saindo.",
+        "north": {
+            "name": "um caminho para a frente do Village",
+            "link": "int:village"
+        },
+        "south": {
+            "name": "o Campão",
+            "link": "campão"
+        },
+        "east": {
+            "name": "a trilha para o Lago Ness, subindo o morro",
+            "link": "lago_ness"
+        },
+        "west": {
+            "name": "um caminho para a frente do ginásio, perto do gramado central",
+            "link": "int:gramado/se"
+        },
+        "north-east": {
+            "name": "a entrada da piscina",
+            "link": "piscina"
+        },
+        "south-west": {
+            "name": "a entrada do ginásio pela parte de trás",
+            "link": "ginásio"
+        }
+    },
+    "ginásio": {
+        "location": "em uma das arquibancadas do ginásio, com algumas pessoas jogando vôlei, e outras jogando basquete",
+        "east": {
+            "name": "a saída pela frente, para a frente do lago",
+            "link": "int:gramado/se"
+        },
+        "west": {
+            "name": "a saída por trás, para frente da piscina",
+            "link": "int:piscina"
+        },
+        "south": {
+            "name": "um portão aberto para o salão de festas",
+            "link": "festa"
+        }
+    },
+    "festa": {
+        "location": "no salão de festas, que é muito ecuro, mesmo durante o dia, e é coberto de preto e luzes negras, por onde você olha",
+        "north": {
+            "name": "um portão aberto para o ginásio",
+            "link": "ginásio"
+        },
+        "west": {
+            "name": "a saída do salão de festas, para a frente do lago",
+            "link": "int:festa"
+        }
+    },
+    "int:festa": {
+        "location": "na frente do salão de festas, com um estacionamento e uma floresta em volta",
+        "east": {
+            "name": "a entrada do salão de festas",
+            "link": "festa"
+        },
+        "west": {
+            "name": "o caminho para o palco do Zim Color Festival e o quiosque do caiaque",
+            "link": "int:zim"
+        },
+        "north": {
+            "name": "o caminho para a frente do ginásio, do outro lado do lago",
+            "link": "int:gramado/se"
+        }
+    },
+    "zim": {
+        "location": "no palco aonde acontece o Zim Color Festival, também consegue ver manchas coloridas espalhadas pelo chão, o palco é feito de madeira, com fotos do festival no fundo",
+        "west": {
+            "name": "uma entrada da quadra de tênis",
+            "link": "quadra"
+        },
+        "north": {
+            "name": "um caminho para o caiaque, que também leva à frente do salão de festa",
+            "link": "int:zim"
+        }
+    },
+    "int:zim": {
+        "location": "em uma bifurcação, do lado do lago, com uma roda de moinho e alguns troncos cortados no chão, que servem de banco",
+        "east": {
+            "name": "o caminho para a frente do salão de festas",
+            "link": "int:festa"
+        },
+        "west": {
+            "name": "o quiosque dos caiaques",
+            "link": "caiaque"
+        },
+        "south": {
+            "name": "o palco do Zim Color Festival",
+            "link": "zim"
+        },
+        "north": {
+            "name": "o lago, e um pequeno riacho que move a roda",
+            "link": null
+        }
+    },
+    "caiaque": {
+        "location": "no quiosque de onde saem os caiaques, cheio de coletes salva-vidas apoiados em pedaços de madeira",
+        "east": {
+            "name": "um caminho para o palco do Zim, que também leva à frente do salão de festa",
+            "link": "int:zim"
+        },
+        "south": {
+            "name": "uma entrada da quadra de tênis",
+            "link": "quadra"
+        }
+    },
+    "quadra": {
+        "location": "sentado em umas das arquibancadas da quadra de tênis, que é aberta, só rodeada por uma grade, com algumas pessoas jogando",
+        "north": {
+            "name": "uma saída para o quiosque dos caiaques",
+            "link": "caiaque"
+        },
+        "east": {
+            "name": "uma saída para o palco do Zim",
+            "link": "zim"
+        }
+    },
+    "campo/n": {
+        "location": "no meio de um gramado aberto, cercado de altos morros",
+        "south": {
+            "name": "o outro campo, que é como uma extenção menor pra este, e tem uma saída para o Lago Ness",
+            "link": "campo/s"
+        },
+        "north-west": {
+            "name": "o chalé Village",
+            "link": "int:village"
+        },
+        "north": {
+            "name": "uma subida para a Vila Olímpica",
+            "link": null,
+            "messages": [
+                "Você não consegue subir o barranco, por ele ser muito íngrime."
+            ]
+        }
+    },
+    "campo/s": {
+        "location": "em um campo um pouco menor, dividido do outro por uma grade, com uma bica de água e alguns bancos de madeira",
+        "north": {
+            "name": "o campo principal",
+            "link": "campo/n"
+        },
+        "south": {
+            "name": "uma trilha para o Lago Ness",
+            "link": "lago_ness"
+        },
+        "west": {
+            "name": "um caminho para a frente da piscina",
+            "link": "int:piscina"
+        }
+    },
+    "campão": {
+        "location": "no Campão, um grande campo de futebol, na parte de trás do salão de festas e do ginásio",
+        "north": {
+            "name": "a saída para a frente da piscina",
+            "link": "int:piscina"
+        },
+        "east": {
+            "name": "uma trilha mais curta (e mais íngrime) para o Lago Ness",
+            "link": "lago_ness"
+        }
+    },
+    "lago_ness": {
+        "location": "em uma clareira, do lado de um lago, com mata fechada por todos os lados",
+        "west": {
+            "name": "a trilha de volta para o campão",
+            "link": "campão"
+        },
+        "north": {
+            "name": "a subida para o Sem Noção e para a Tiroleza",
+            "link": "int:tiroleza"
+        }
+    },
+    "int:tiroleza": {
+        "location": "subindo o caminho para a Tiroleza e o Sem Noção. A clareira parece ainda mais bonita daqui de cima",
+        "south": {
+            "name": "um monte de nada",
+            "link": null,
+            "messages": [
+                "Eu não vou deixar você descer, sério, nem precisa tentar.",
+                "Não, sério mesmo, você nao vai descer.",
+                "Porque eu não quero.",
+                "Cara, isso é um jogo, entendo se você tem medo na vida real, mas aqui...",
+                "Vamos ficar aqui o dia inteiro.",
+                "Uma qualidade marcante neste péssimo exemplar de homo sapiens que o jogador representa é a incapacidade de executar tarefas interessantes em sua vida.",
+                "...",
+                "..",
+                ".",
+                "Vou te contar uma história, então.",
+                "Eu comprei um saco de batatas no mercado e levei uma raposa, que tinha o nome de Laura, quando chegamos em casa, ela tinha virado um saco de batatas denovo.",
+                "O que isso tem a ver com a tiroleza, com o Sem Noção ou com o NR?",
+                "Nada.",
+                "Mas você está discutindo com um jogo.",
+                "O que mais você queria?",
+                "Pera, acho que posso te sugerir uma coisa:",
+                "http://twokinds.keenspot.com",
+                "Não discuta com o jogo, leia TwoKinds, porque é bom.",
+                "Ich bin gekommen um sie zu holen.",
+                "...",
+                "Então...",
+                "Vamos nos conhecer melhor.",
+                "Eu me chamo Matheus Borella.",
+                "Sou programador.",
+                "...",
+                "Peraí...",
+                "Você está procurando um EASTER EGG? Escondido AQUI?",
+                "Okay.",
+                "Toma esse aqui, fera!",
+                "\"But I know you wouldn't like *me* kissing *you* for no reason and saying it was the *Heat of the Moment*.\"",
+                "\"Well, maybe I would!\"",
+                "Suficiente pra você?",
+                "Não?",
+                "Então vou falar umas últimas coisas:",
+                "Esse jogo começou a ser feito dia 7 de outubro, e espero que seja terminado em 15 dias",
+                "E a inspiração veio de uma Livestream do Joel, Vinesauce",
+                "Agora chega, vai jogar o jogo que eu fiz."
+            ]
+        },
+        "north": {
+            "name": "o Sem Noção",
+            "link": "event:sem_noção"
+        },
+        "east": {
+            "name": "a Tiroleza",
+            "link": "event:tiroleza"
+        }
+    }
+}

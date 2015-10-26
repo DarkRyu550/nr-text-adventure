@@ -1,0 +1,5 @@
+# Ignore everything under "bin/"
+bin/
+
+# Ignore ".user" files
+*.user
