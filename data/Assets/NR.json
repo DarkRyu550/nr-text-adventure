@@ -146,7 +146,7 @@
         },
         "east": {
             "name": "a trilha para o Lago Ness, subindo o morro",
-            "link": "lago_ness"
+            "link": "lago_ness/e"
         },
         "west": {
             "name": "um caminho para a frente do ginásio, perto do gramado central",
@@ -280,7 +280,7 @@
         },
         "south": {
             "name": "uma trilha para o Lago Ness",
-            "link": "lago_ness"
+            "link": "lago_ness/e"
         },
         "west": {
             "name": "um caminho para a frente da piscina",
@@ -295,10 +295,10 @@
         },
         "east": {
             "name": "uma trilha mais curta (e mais íngrime) para o Lago Ness",
-            "link": "lago_ness"
+            "link": "lago_ness/e"
         }
     },
-    "lago_ness": {
+    "lago_ness/e": {
         "location": "em uma clareira, do lado de um lago, com mata fechada por todos os lados",
         "west": {
             "name": "a trilha de volta para o campão",
@@ -307,6 +307,19 @@
         "north": {
             "name": "a subida para o Sem Noção e para a Tiroleza",
             "link": "int:tiroleza"
+        }
+    },
+    "lago_ness/w":{
+        "location": "do outro lado do Lago Ness, depois de descer da primeira tiroleza",
+        "east": {
+            "name": "o Lago Ness, iluminado pelo Sol, e envolto por uma densa floresta",
+            "link": null
+        },
+        "west": {
+            "name": "uma subida para a segunda tiroleza, a que te leva devolta para o outro lado",
+
+            "type": "event",
+            "link": "tiroleza/second"
         }
     },
     "int:tiroleza": {
@@ -356,11 +369,15 @@
         },
         "north": {
             "name": "o Sem Noção",
-            "link": "event:sem_noção"
+
+            "type": "event",
+            "link": "sem_noção"
         },
         "east": {
             "name": "a Tiroleza",
-            "link": "event:tiroleza"
+
+            "type": "event",
+            "link": "tiroleza/first"
         }
     }
 }

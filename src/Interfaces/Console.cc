@@ -25,7 +25,9 @@ namespace Interfaces{
 
     void Console::halt() const{
         // Wait for any character to be pressed
-        this->getc();
+        char c = this->getc();
+        while(c != '\n')
+            c = this->getc();
     }
 
     void Console::print(std::string format, ...) const{
@@ -64,6 +66,6 @@ namespace Interfaces{
 
     char Console::getc() const{
         // Read a character from STDIN
-        fgetc(stdin);
+        return getchar();
     }
 } // Interfaces

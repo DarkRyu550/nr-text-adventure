@@ -7,6 +7,12 @@ namespace Adventure{
 
         std::ifstream map_nr("Assets/NR.json");
         _map.load(map_nr);
+
+        // Clear and load events
+        _events.clear();
+
+        std::ifstream event_file("Assets/Events.json");
+        _events.load(event_file);
     }
 
     Game::~Game(){
@@ -22,21 +28,21 @@ namespace Adventure{
 
         set_time(start);
 
-        // Enter start room
-        this->enter_room("início");
+        // Create a link to the start room and enter it
+        Link start_room;
+        start_room.type = LINK_TYPE_ROOM;
+        start_room.destination = "int:tiroleza";
+
+        this->enter_link(start_room);
 
         // Main prompt loop
         this->_quit = false;
         while(!_quit){
             this->prompt();
         }
-
-        // TODO: Reset events
     }
 
-    void Game::quit(){
-        // TODO: Notify quit events
-
+    void Game::quit()
         // TODO: Display exit mesage
         this->_console.halt();
 
@@ -62,21 +68,59 @@ namespace Adventure{
         // TODO: Notify events
     }
 
-    void Game::enter_room(const std::string& id){
+    void Game::enter_link(const Link& link){
         // Check for available rooms with the given ID
-        auto it = _map.rooms().find(id);
-        if(it != _map.rooms().end())
-            this->_current_room = &(it->second);
-        else
-            this->_current_room = nullptr;
+        if(link.type == LINK_TYPE_ROOM){
+            auto it = _map.rooms().find(link.destination);
+            if(it != _map.rooms().end())
+                this->_current_room = &(it->second);
+            else
+                this->_current_room = nullptr;
 
-        // Clear link counter
-        this->_link_counter = {};
+            // Clear link counter
+            this->_link_counter = {};
 
-        // Display changes
-        this->display();
+            // Display changes
+            this->display();
+        }else if(link.type == LINK_TYPE_EVENT){
+            auto it = _events.events().find(link.destination);
+            if(it == _events.events().end()){
+                _console.println("Erro: link para evento inexistente. (Game.cc, linha 80)\n"
+                                    "\tEm link de ID \"%s\"\n"
+                                    "\tGame::_events::find(\"%s\") retornou Iterator::end()\n"
+                                    "\tGame::_current_room::id = \"%s\"\n"
+                                    "\tGame::_time = {%d, %d, %d}\n",
+                                        link.id.c_str(), link.destination.c_str(),
+                                        _current_room ? _current_room->id.c_str() : "nullptr",
+                                        _time.day, _time.hours, _time.minutes);
 
+                // Quit function
+                return;
+            }
 
+            // Get the event
+            Event event = it->second;
+
+            // Clear console
+            _console.clear();
+            _console.halt(); // Bodge, prevent double messages
+
+            // Iterate through its messages
+            for(size_t i = 0; i < event.messages.size(); ++i){
+                _console.println(event.messages[i].c_str());
+                _console.halt();
+            }
+
+            // Enter the quit link
+            this->enter_link(event.quit);
+        }else{
+            // Display an error
+            _console.println("Error: Tried to enter link with invalid type.\n"
+                                "\tLink::id = \"%s\"\n"
+                                "\tLink::type = \"%s\"\n"
+                                "\tLink::destination = \"%s\"",
+                            link.id.c_str(), link.type.c_str(), link.destination.c_str());
+        }
     }
 
     void Game::execute(const std::string& command){
@@ -110,7 +154,7 @@ namespace Adventure{
             auto it = _current_room->links.find(ID); \
             if(it != _current_room->links.end()){ \
                 if(!it->second.destination.empty()){ \
-                    this->enter_room(it->second.destination); \
+                    this->enter_link(it->second); \
                     DISPLAY_USAGE_MESSAGE(ID, it->second); \
                 }else{ \
                     this->_console.println("Você não pode ir nessa direção."); \

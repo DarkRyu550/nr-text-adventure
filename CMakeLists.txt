@@ -25,6 +25,14 @@ add_definitions(${JSON_CFLAGS} ${JSON_CFLAGS_OTHER})
 link_libraries(${JSON_LIBRARIES})
 link_directories(${JSON_LIBRARY_DIRS})
 
+# Include Gtkmm
+pkg_check_modules(GTK REQUIRED gtkmm-3.0)
+
+add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
+
+link_libraries(${GTK_LIBRARIES})
+link_directories(${GTK_LIBRARY_DIRS})
+
 # Link executable
 add_executable(Adventure ${Adventure_SOURCES})
 

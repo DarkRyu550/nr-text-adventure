@@ -3,6 +3,7 @@
 
 #include "../Interfaces/Console.hh" // Console input and output
 #include "Map.hh"                   // Map system
+#include "Event.hh"                 // Event system
 
 namespace Adventure{
     class Game{
@@ -24,6 +25,9 @@ namespace Adventure{
         /** The game's maps */
         Map _map;
 
+        /** The game's events */
+        EventSet _events;
+
         /** The current room. */
         const Map::Room *_current_room = nullptr;
 
@@ -44,15 +48,15 @@ namespace Adventure{
 
         /** Quits the game. */
         void quit();
-        
+
         /** Prompts the user to insert a command. */
         void prompt();
 
         /** Sets the current game time. */
         void set_time(const Time&);
 
-        /** Enters the room with specified ID, null if none found. */
-        void enter_room(const std::string&);
+        /** Enters the specified link. */
+        void enter_link(const Link&);
 
         /** Executes a game command */
         void execute(const std::string&);

@@ -26,35 +26,6 @@ namespace Adventure{
         }
     }
 
-    /** Creates a Link from a JSON object. */
-    static inline Map::Link mklink(std::string id, Json::Value json_link){
-        Map::Link link = {};
-
-        // Fill link data
-        link.id = id;
-        for(std::string key : json_link.getMemberNames()){
-            Json::Value child = json_link[key];
-
-            if(key == LINK_NAME)
-                // Child is the name
-                link.name = child.asString();
-            else if(key == LINK_ROOM_ID)
-                // Child is the destination
-                link.destination = child.asString();
-            else if(key == LINK_MESSAGES){
-                // Child contains the link's usage messages
-                if(child.isArray() || child.isObject()){
-                    for(Json::Value message : child){
-                        // Add the string
-                        link.messages.push_back(message.asString());
-                    }
-                }
-            }
-        }
-
-        return link;
-    }
-
     void Map::load(Json::Value root){
         // Iterate through all children
         for(std::string id : root.getMemberNames()){
@@ -77,28 +48,28 @@ namespace Adventure{
                     room.name = child.asString();
                 }else if(key == DIRECTION_NORTH){
                     // North
-                    room.links[DIRECTION_NORTH] = mklink(key, child);
+                    room.links[DIRECTION_NORTH] = Link(key, child);
                 }else if(key == DIRECTION_SOUTH){
                     // South
-                    room.links[DIRECTION_SOUTH] = mklink(key, child);
+                    room.links[DIRECTION_SOUTH] = Link(key, child);
                 }else if(key == DIRECTION_EAST){
                     // East
-                    room.links[DIRECTION_EAST] = mklink(key, child);
+                    room.links[DIRECTION_EAST] = Link(key, child);
                 }else if(key == DIRECTION_WEST){
                     // West
-                    room.links[DIRECTION_WEST] = mklink(key, child);
+                    room.links[DIRECTION_WEST] = Link(key, child);
                 }else if(key == DIRECTION_NORTHWEST){
                     // North-west
-                    room.links[DIRECTION_NORTHWEST] = mklink(key, child);
+                    room.links[DIRECTION_NORTHWEST] = Link(key, child);
                 }else if(key == DIRECTION_NORTHEAST){
                     // North-east
-                    room.links[DIRECTION_NORTHEAST] = mklink(key, child);
+                    room.links[DIRECTION_NORTHEAST] = Link(key, child);
                 }else if(key == DIRECTION_SOUTHWEST){
                     // South-west
-                    room.links[DIRECTION_SOUTHWEST] = mklink(key, child);
+                    room.links[DIRECTION_SOUTHWEST] = Link(key, child);
                 }else if(key == DIRECTION_SOUTHEAST){
                     // South-east
-                    room.links[DIRECTION_SOUTHEAST] = mklink(key, child);
+                    room.links[DIRECTION_SOUTHEAST] = Link(key, child);
                 }
 
                 // For now, ignore all other room variables

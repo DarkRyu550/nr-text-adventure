@@ -1,17 +1,10 @@
 #ifndef ADVENTURE_MAP_H_
 #define ADVENTURE_MAP_H_
 
-#include "../Common.h"
-
-#include <json/json.h> // For everything Json
+#include "AdventureCommon.hh"
 
 // Room's variable names
 #define ROOM_DISPLAY_NAME "location"
-
-// Link's variable names
-#define LINK_NAME     "name"
-#define LINK_ROOM_ID  "link"
-#define LINK_MESSAGES "messages"
 
 // Map directions
 #define DIRECTION_NORTH "north"
@@ -28,20 +21,6 @@
 namespace Adventure{
     class Map{
     public:
-        struct Link{
-            /** The link's ID. */
-            std::string id;
-
-            /** Display name for the link. */
-            std::string name;
-
-            /** Messages to display when the link is activated. */
-            std::vector<std::string> messages;
-
-            /** ID of the destination room. */
-            std::string destination;
-        };
-
         struct Room{
             /** The room's ID. */
             std::string id;

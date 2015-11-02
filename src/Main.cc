@@ -3,7 +3,9 @@
 
 #include "Interfaces/Console.hh"
 
-int main(){
+#include "Interfaces/Terminal/TerminalWindow.hh"
+
+int main(int argc, char **argv){
     Adventure::Game game;
 
     // Display greeting
@@ -11,6 +13,14 @@ int main(){
 
     // Start game
     game.start();
+
+    Glib::RefPtr<Gtk::Application> app =
+        Gtk::Application::create(argc, argv,
+          "org.gtkmm.examples.base");
+
+
+    Interfaces::TerminalWindow window;
+    app->run(window);
 
     return 0;
 }
