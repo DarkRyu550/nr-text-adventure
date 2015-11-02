@@ -297,7 +297,7 @@ namespace Adventure{
         _console.println();
     }
 
-    Interfaces::Console const& Game::console() const{
+    Interfaces::DefaultConsole const& Game::console() const{
         return this->_console;
     }
 

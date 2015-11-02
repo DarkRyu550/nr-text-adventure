@@ -2,7 +2,7 @@
 #define COMMON_GTK_H_
 
 // Include default project commons
-#include "../../Common.h"
+#include "../../Common.hh"
 
 #include <gtkmm.h> // For everything GTK+, binded to C++
 

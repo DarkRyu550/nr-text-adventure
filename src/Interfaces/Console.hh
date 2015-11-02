@@ -1,7 +1,7 @@
 #ifndef CONSOLE_H_
 #define CONSOLE_H_
 
-#include "../Common.h"
+#include "../Common.hh"
 
 namespace Interfaces{
     class Console{

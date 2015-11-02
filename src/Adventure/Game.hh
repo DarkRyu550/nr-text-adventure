@@ -1,9 +1,9 @@
 #ifndef ADVENTURE_GAME_H_
 #define ADVENTURE_GAME_H_
 
-#include "../Interfaces/Console.hh" // Console input and output
-#include "Map.hh"                   // Map system
-#include "Event.hh"                 // Event system
+#include "Map.hh"         // Map system
+#include "Event.hh"       // Event system
+#include "MakeConsole.hh" // The Game's default console
 
 namespace Adventure{
     class Game{
@@ -16,8 +16,8 @@ namespace Adventure{
             u8 minutes;
         };
     private:
-        /** Console for text IO. */
-        Interfaces::Console _console;
+        /** Console for text IO. (See MakeConfig.h.in for type) */
+        Interfaces::DefaultConsole _console;
 
         /** Set this to true to stop the main loop */
         bool _quit = false;
@@ -68,7 +68,7 @@ namespace Adventure{
         void greet() const;
 
         /** @return The console currently being used by the game. */
-        Interfaces::Console const& console() const;
+        Interfaces::DefaultConsole const& console() const;
 
         /** @return The game's greeting string. */
         std::string greeting() const;
