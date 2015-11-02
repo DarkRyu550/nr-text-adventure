@@ -31,7 +31,7 @@ namespace Adventure{
         // Create a link to the start room and enter it
         Link start_room;
         start_room.type = LINK_TYPE_ROOM;
-        start_room.destination = "int:tiroleza";
+        start_room.destination = "início";
 
         this->enter_link(start_room);
 
@@ -42,7 +42,7 @@ namespace Adventure{
         }
     }
 
-    void Game::quit()
+    void Game::quit(){
         // TODO: Display exit mesage
         this->_console.halt();
 
