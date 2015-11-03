@@ -1,10 +1,11 @@
 #ifndef TERMINAL_WINDOW_H_
 #define TERMINAL_WINDOW_H_
 
-#include "GtkCommon.h"
+#include "GtkCommon.hh"
 
 namespace Interfaces{
-    class TerminalWindow : public Gtk::Window{
+namespace Terminal{
+    class Window : public Gtk::Window{
     protected:
         /** The grid layout to contain objects. */
         Gtk::Grid _grid;
@@ -16,13 +17,13 @@ namespace Interfaces{
         Gtk::Entry _prompt;
 
     public:
-        TerminalWindow();
-        ~TerminalWindow();
+        Window();
+        ~Window();
 
-        Gtk::TextView const& console() const;
-
-        Gtk::Entry const& prompt() const;
+        Gtk::TextView& console();
+        Gtk::Entry& prompt();
     };
-}
+} // Terminal
+} // Interfaces
 
 #endif // TERMINAL_WINDOW_H_

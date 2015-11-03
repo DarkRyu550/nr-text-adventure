@@ -1,7 +1,7 @@
 #ifndef COMMON_ADVENTURE_H_
 #define COMMON_ADVENTURE_H_
 
-#include "../Common.hh"
+#include "Common.hh"
 
 // Link's variable names
 #define LINK_NAME     "name"

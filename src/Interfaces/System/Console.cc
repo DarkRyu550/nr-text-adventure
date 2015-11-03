@@ -1,6 +1,7 @@
 #include "Console.hh"
 
 namespace Interfaces{
+namespace System{
     Console::Console(){
 
     }
@@ -17,20 +18,20 @@ namespace Interfaces{
         return 200; // Symbolic height.
     }
 
-    void Console::clear() const{
+    void Console::clear(){
         // Fill height with newlines
         for(size_t i = 0; i < this->height(); ++i)
             this->print("\n");
     }
 
-    void Console::halt() const{
-        // Wait for any character to be pressed
+    void Console::halt(){
+        // Wait for enter to be pressed
         char c = this->getc();
         while(c != '\n')
             c = this->getc();
     }
 
-    void Console::print(std::string format, ...) const{
+    void Console::print(std::string format, ...){
         va_list list;
 
         // Get a list of all arguments, excluging 'format'
@@ -43,7 +44,7 @@ namespace Interfaces{
         va_end(list);
     }
 
-    void Console::println(std::string format, ...) const{
+    void Console::println(std::string format, ...){
         va_list list;
 
         // Get a list of all arguments, excluging 'format'
@@ -56,7 +57,7 @@ namespace Interfaces{
         va_end(list);
     }
 
-    std::string Console::gets() const{
+    std::string Console::gets(){
         // Read string from STDIN
         std::string s;
         std::cin >> s;
@@ -64,8 +65,9 @@ namespace Interfaces{
         return s;
     }
 
-    char Console::getc() const{
+    char Console::getc(){
         // Read a character from STDIN
         return getchar();
     }
+} // System
 } // Interfaces

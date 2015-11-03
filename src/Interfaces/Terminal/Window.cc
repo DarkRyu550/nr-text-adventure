@@ -1,7 +1,8 @@
-#include "TerminalWindow.hh"
+#include "Window.hh"
 
 namespace Interfaces{
-    TerminalWindow::TerminalWindow(){
+namespace Terminal{
+    Window::Window(){
         // Set default Window properties
         this->set_title(DISPLAY_NAME);
         this->set_default_size(1280, 720);
@@ -15,8 +16,7 @@ namespace Interfaces{
 
         _grid.attach(_console, 0, 0, 1, 1);
 
-        // Make the prompt slightly less dark, and monospaced, then add it to the grid
-        _prompt.override_background_color(Gdk::RGBA("#222"));
+        // Make the prompt monospaced, then add it to the grid
         _prompt.set_placeholder_text("Digite um comando");
         _prompt.set_editable(true);
         _prompt.grab_focus();
@@ -29,7 +29,16 @@ namespace Interfaces{
         this->show_all_children();
     }
 
-    TerminalWindow::~TerminalWindow(){
+    Window::~Window(){
 
     }
-}
+
+    Gtk::TextView& Window::console(){
+        return _console;
+    }
+
+    Gtk::Entry& Window::prompt(){
+        return _prompt;
+    }
+} // Terminal
+} // Interfaces

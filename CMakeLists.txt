@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 14)
 # Include PkgConfig
 find_package(PkgConfig REQUIRED)
 
+
 ###################
 ##  NrAdventure  ##
 ###################
@@ -16,6 +17,12 @@ project(Adventure)
 
 # Include Sources
 include(Sources.cmake)
+
+# Use Threading
+set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
+
+find_package(Threads REQUIRED)
+link_libraries(${CMAKE_THREAD_LIBS_INIT})
 
 # Include JsonCpp
 pkg_check_modules(JSON REQUIRED jsoncpp)
@@ -61,10 +68,13 @@ endif(${USE_GTK})
 
 # Configure Metadata.h
 configure_file (
-  "${PROJECT_SOURCE_DIR}/src/MakeConsole.hh.in"
-  "${PROJECT_BINARY_DIR}/MakeConsole.hh"
+  "${PROJECT_SOURCE_DIR}/src/Interfaces/Interfaces.hh.in"
+  "${PROJECT_BINARY_DIR}/Interfaces.hh"
 )
 include_directories("${PROJECT_BINARY_DIR}")
+
+# Add the source root as include folder
+include_directories("${PROJECT_SOURCE_DIR}/src")
 
 # Link executable
 add_executable(Adventure ${Adventure_SOURCES})

@@ -1,7 +1,7 @@
 #include "Game.hh"
 
 namespace Adventure{
-    Game::Game(){
+    Game::Game(int argc, char **argv){
         // Clear and load maps
         _map.clear();
 
@@ -64,8 +64,6 @@ namespace Adventure{
     void Game::set_time(const Game::Time& time){
         // Update the time variable
         this->_time = time;
-
-        // TODO: Notify events
     }
 
     void Game::enter_link(const Link& link){
@@ -203,7 +201,7 @@ namespace Adventure{
         #undef DISPLAY_USAGE_MESSAGE
     }
 
-    void Game::display() const{
+    void Game::display(){
         // Clear the screen
         _console.clear();
 
@@ -237,12 +235,12 @@ namespace Adventure{
         // Write current location
         _console.print("Você está %s.\n\n", _current_room->name.c_str());
 
-        // Write time
-        _console.print(
-              std::to_string(_time.day) + "º dia, às "
-            + std::to_string(_time.hours)
-            + ':' + std::to_string(_time.minutes)
-            + "\n\n");
+        // Write time (Disabled)
+        // _console.print(
+        //       std::to_string(_time.day) + "º dia, às "
+        //     + std::to_string(_time.hours)
+        //     + ':' + std::to_string(_time.minutes)
+        //     + "\n\n");
 
         // Write links
         // Firstly, define a macro
@@ -283,7 +281,7 @@ namespace Adventure{
         return greeting;
     }
 
-    void Game::greet() const{
+    void Game::greet(){
         // Clear screen
         _console.clear();
 
@@ -297,7 +295,7 @@ namespace Adventure{
         _console.println();
     }
 
-    Interfaces::DefaultConsole const& Game::console() const{
+    Interfaces::Console const& Game::console() const{
         return this->_console;
     }
 

@@ -1,0 +1,12 @@
+#ifndef INTERFACES_H_
+#define INTERFACES_H_
+
+// Include the console files
+#include "${CMAKE_SOURCE_DIR}/${Adventure_CONSOLE_FILE}"
+
+// Set Interfaces to use the selected namespace
+namespace Interfaces{
+    typedef ${Adventure_CONSOLE_CLASS} Console;
+}
+
+#endif // INTERFACES

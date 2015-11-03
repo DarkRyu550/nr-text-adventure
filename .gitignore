@@ -3,3 +3,6 @@ bin/
 
 # Ignore ".user" files
 *.user
+
+# Ignore images
+*.png

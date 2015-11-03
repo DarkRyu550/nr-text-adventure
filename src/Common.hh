@@ -9,6 +9,7 @@
 #include <vector>        // Lists
 #include <exception>     // Exception
 #include <stdexcept>     // Standard Exceptions, such as std::runtime_error
+#include <thread>        // Threading
 
 // Standard C Includes
 #include <cstdio>  // Standard IO

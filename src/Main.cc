@@ -2,7 +2,11 @@
 #include "Adventure/Map.hh"
 
 int main(int argc, char **argv){
-    Adventure::Game game;
+    // Initialize Console
+    Interfaces::Console::initialize(argc, argv);
+
+    // Create a game instance
+    Adventure::Game game(argc, argv);
 
     // Display greeting
     game.greet();
