@@ -43,8 +43,21 @@ namespace Adventure{
     }
 
     void Game::quit(){
-        // TODO: Display exit mesage
-        this->_console.halt();
+        _console.clear();
+
+        _console.print("E esse foi o meu pequeno jogo, que fiz para me recordar "
+                       "dessa viagem maravilhosa que foi o NR, e espero que tenha "
+                       "sido um candidato diferente e intrigante.\n\n"
+                       "Agradecimentos:\n\tMeu primo, Matheus - Que me "
+                       "ajudou a montar o mapa, que eu usei como base para o jogo, "
+                       "e ajustar as descrições.\n\tSimon - Que me convenceu a "
+                       "fazer o jogo nesse formato.\n\tKaio - Por nem ter baixado o jogo para testar.\n\n"
+                       "Muito obrigado por ter jogado!\n"
+                       "\t- Matheus Borella <dark.ryu.550@gmail.com>, 03/11/2015");
+
+        // Halt the game
+        _console.halt();
+        _console.halt();
 
         // Set quit to true
         this->_quit = true;
