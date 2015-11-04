@@ -1,6 +1,15 @@
 # NR Text Adventure
 O jogo Text Adventure que fiz para concorrer no "NR Maníaco 2015".
 
+# Comandos
+Os comandos no jogo são bem ao estilo de jogos Text Adventure mesmo:
+
+  ```olhar```   - Mosra as informações da sala atual.
+  
+  ```direção``` - Vai para a sala nessa direção. (Exemplo: ```norte```)
+  
+  ```sair, quit ou exit``` - Sai do jogo.
+
 # Instruções
 Aqui estão as instruções para baixar e jogar:
 
