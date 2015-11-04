@@ -123,7 +123,7 @@
             "link": "ginásio"
         },
         "south-west": {
-            "name": "o lago, que está cheio de gansos e tem um aspecto marrom, mas que acaba o ajudando a se itegrar na paisagem",
+            "name": "o lago, que está cheio de gansos e tem um aspecto marrom, mas que acaba o ajudando a se integrar na paisagem",
             "link": null
         }
     },
@@ -177,7 +177,7 @@
         }
     },
     "festa": {
-        "location": "no salão de festas, que é muito ecuro, mesmo durante o dia, e é coberto de preto e luzes negras, por onde você olha",
+        "location": "no salão de festas, que é muito escuro, mesmo durante o dia, e é coberto de preto e luzes negras, por onde você olha",
         "north": {
             "name": "um portão aberto para o ginásio",
             "link": "ginásio"
@@ -257,7 +257,7 @@
     "campo/n": {
         "location": "no meio de um gramado aberto, cercado de altos morros",
         "south": {
-            "name": "o outro campo, que é como uma extenção menor pra este, e tem uma saída para o Lago Ness",
+            "name": "o outro campo, que é como uma extensão menor pra este, e tem uma saída para o Lago Ness",
             "link": "campo/s"
         },
         "north-west": {
@@ -268,7 +268,7 @@
             "name": "uma subida para a Vila Olímpica",
             "link": null,
             "messages": [
-                "Você não consegue subir o barranco, por ele ser muito íngrime."
+                "Você não consegue subir o barranco, por ele ser muito íngreme."
             ]
         }
     },
@@ -294,7 +294,7 @@
             "link": "int:piscina"
         },
         "east": {
-            "name": "uma trilha mais curta (e mais íngrime) para o Lago Ness",
+            "name": "uma trilha mais curta (e mais íngreme) para o Lago Ness",
             "link": "lago_ness/e"
         }
     },
@@ -305,31 +305,31 @@
             "link": "campão"
         },
         "north": {
-            "name": "a subida para o Sem Noção e para a Tiroleza",
-            "link": "int:tiroleza"
+            "name": "a subida para o Sem Noção e para a tirolesa",
+            "link": "int:tirolesa"
         }
     },
     "lago_ness/w":{
-        "location": "do outro lado do Lago Ness, depois de descer da primeira tiroleza",
+        "location": "do outro lado do Lago Ness, depois de descer da primeira tirolesa",
         "east": {
             "name": "o Lago Ness, iluminado pelo Sol, e envolto por uma densa floresta",
             "link": null
         },
         "west": {
-            "name": "uma subida para a segunda tiroleza, a que te leva devolta para o outro lado",
+            "name": "uma subida para a segunda tirolesa, a que te leva de volta para o outro lado",
 
             "type": "event",
-            "link": "tiroleza/second"
+            "link": "tirolesa/second"
         }
     },
-    "int:tiroleza": {
-        "location": "subindo o caminho para a Tiroleza e o Sem Noção. A clareira parece ainda mais bonita daqui de cima",
+    "int:tirolesa": {
+        "location": "subindo o caminho para a tirolesa e o Sem Noção. A clareira parece ainda mais bonita daqui de cima",
         "south": {
             "name": "um monte de nada",
             "link": null,
             "messages": [
                 "Eu não vou deixar você descer, sério, nem precisa tentar.",
-                "Não, sério mesmo, você nao vai descer.",
+                "Não, sério mesmo, você não vai descer.",
                 "Porque eu não quero.",
                 "Cara, isso é um jogo, entendo se você tem medo na vida real, mas aqui...",
                 "Vamos ficar aqui o dia inteiro.",
@@ -338,8 +338,8 @@
                 "..",
                 ".",
                 "Vou te contar uma história, então.",
-                "Eu comprei um saco de batatas no mercado e levei uma raposa, que tinha o nome de Laura, quando chegamos em casa, ela tinha virado um saco de batatas denovo.",
-                "O que isso tem a ver com a tiroleza, com o Sem Noção ou com o NR?",
+                "Eu comprei um saco de batatas no mercado e levei uma raposa, que tinha o nome de Laura, quando chegamos em casa, ela tinha virado um saco de batatas de novo.",
+                "O que isso tem a ver com a tirolesa, com o Sem Noção ou com o NR?",
                 "Nada.",
                 "Mas você está discutindo com um jogo.",
                 "O que mais você queria?",
@@ -374,10 +374,10 @@
             "link": "sem_noção"
         },
         "east": {
-            "name": "a Tiroleza",
+            "name": "a tirolesa",
 
             "type": "event",
-            "link": "tiroleza/first"
+            "link": "tirolesa/first"
         }
     }
 }

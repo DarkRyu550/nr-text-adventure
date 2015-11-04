@@ -1,13 +1,13 @@
 {
     "sem_noção":{
         "messages":[
-            "Você se senta na base da descida, ainda meio cansado de toda a subida até aqui, o monitor se prapara para te empurrar, e você vê a descida, que parece bem desesperadora olhando de cima...",
+            "Você se senta na base da descida, ainda meio cansado de toda a subida até aqui, o monitor se prepara para te empurrar, e você vê a descida, que parece bem desesperadora olhando de cima...",
             "\"Preparado?, no quatro!\"",
             "Um.",
             "Dois.",
             "\"QUATRO!!!\"",
-            "Você só têm tempo de perceber uma brisa fria na sua cara... Até a queda, sem volta.",
-            "Você percebe que... Não era esageiro tudo o que diziam sobre o Sem Noção: É rápido, e muito. Sem contar que entra água até onde não tem como.",
+            "Você só tem tempo de perceber uma brisa fria na sua cara... Até a queda, sem volta.",
+            "Você percebe que... Não era exagero tudo que diziam sobre o Sem Noção: É rápido, e muito. Sem contar que entra água até onde não tem como.",
             "Quando chega no lago, sai quicando e espirrando água pra todo lado.",
             "E você sai pelo leste."
         ],
@@ -17,10 +17,10 @@
             "link": "lago_ness/e"
         }
     },
-    "tiroleza/first":{
+    "tirolesa/first":{
         "messages":[
-            "Não parece nada intimidador, pra falar a verdade, mas quando você pula... Sua reação vai ser uma de três: \n\tOpção Nº 1: Você vai sair gritando. (A mais provável, pra falar a verdade)\n\tOpção Nº 2: Você vai sair zoando de algum jeito, não importa qual seja.\n\tOpção Nº 3: Você vai ficar quieto a apreciar a paisagem, nesse caso, vai estar sendo um estraga-prazeres, tanto para si mesmo, quanto para os outros, que estão olhando você descer.",
-            "Você pula, escolhendo a segunda opção, e sai cantando \"I believe I can fly, I believe I can touch the sky...\" (Ainda bem que ninguém consegue te ouvir dali de baixo), e consegue sentir vento batendo no seu rosto de leve, enquanto etravessa para o outro lado do lago."
+            "Não parece nada intimidador, pra falar a verdade, mas quando você pula... Sua reação vai ser uma de três: \n\tOpção Nº 1: Você vai sair gritando. (A mais provável, pra falar a verdade)\n\tOpção Nº 2: Você vai sair zoando de algum jeito, não importa qual seja.\n\tOpção Nº 3: Você vai ficar quieto a apreciar a paisagem, nesse caso, vai estar sendo um estraga prazeres, tanto para si mesmo, quanto para os outros, que estão olhando você descer.",
+            "Você pula, escolhendo a segunda opção, e sai cantando \"I believe I can fly, I believe I can touch the sky...\" (Ainda bem que ninguém consegue te ouvir dali de baixo), e consegue sentir vento batendo no seu rosto de leve, enquanto atravessa para o outro lado do lago."
         ],
 
         "quit":{
@@ -28,9 +28,9 @@
             "link": "lago_ness/w"
         }
     },
-    "tiroleza/second":{
+    "tirolesa/second":{
         "messages":[
-            "Você sobe na segunda tiroleza, que é um pouco mais baixa que a primeira, pega impulso, e sai.",
+            "Você sobe na segunda tirolesa, que é um pouco mais baixa que a primeira, pega impulso, e sai.",
             "Você desce cada vez mais, e pode sentir seu pé tocar o lago, até que chega de volta ao Lago Ness.",
             "Você desamarra a sua proteção e sai."
         ],
